@@ -1,0 +1,20 @@
+fun main() {
+    // Lê a entrada do usuário ou usa uma string vazia se nenhuma entrada for fornecida
+    val url = readLine() ?: "" 
+
+    val resultado: String
+
+    // Verifica se a URL começa com "https://"
+    if (url.startsWith("https://")) {
+        resultado = "URL segura"
+    // Verifica se a URL começa com "http://"
+    } else if (url.startsWith("http://")) {
+        resultado = "URL nao segura"
+    // Caso a URL não comece com nenhum dos protocolos válidos
+    } else {
+        resultado = "Formato invalido"
+    }
+
+    // Exibe o resultado
+    println(resultado)
+}
